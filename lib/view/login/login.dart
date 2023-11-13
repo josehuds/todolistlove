@@ -30,7 +30,7 @@ class Login extends StatelessWidget {
                   child: Column(
                     children: [
                       Image.asset(
-                        'Lovepeople_logo.jpg',
+                        'lib/image/Lovepeople_logo.jpg',
                         height: 150,
                         width: double.infinity,
                         fit: BoxFit.contain,
