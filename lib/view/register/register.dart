@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:todolistlove/view/register/message.dart';
 
 class Register extends StatelessWidget {
   final formKey = GlobalKey<FormState>();
@@ -9,7 +10,7 @@ class Register extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Card(
-        color: Colors.purple.shade200,
+        color: const Color.fromARGB(255, 179, 26, 206),
         elevation: 5.0,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(16.0),
@@ -23,14 +24,16 @@ class Register extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  const Text('Vamos começar!',
-                  style: TextStyle(
-                    fontSize: 25,
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold
-                  ),),
-                    const SizedBox(height: 20,),
-
+                  const Text(
+                    'Vamos começar!',
+                    style: TextStyle(
+                        fontSize: 25,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
                   TextFormField(
                     keyboardType: TextInputType.emailAddress,
                     decoration: InputDecoration(
@@ -98,8 +101,10 @@ class Register extends StatelessWidget {
                     decoration: InputDecoration(
                       contentPadding:
                           const EdgeInsets.symmetric(horizontal: 10.0),
-                          suffixIcon: const Icon(Icons.visibility,
-                          color: Colors.blue,),
+                      suffixIcon: const Icon(
+                        Icons.visibility,
+                        color: Colors.blue,
+                      ),
                       filled: true,
                       fillColor: Colors.white,
                       border: OutlineInputBorder(
@@ -129,8 +134,10 @@ class Register extends StatelessWidget {
                   TextFormField(
                     keyboardType: TextInputType.emailAddress,
                     decoration: InputDecoration(
-                      suffixIcon: const Icon(Icons.visibility,
-                      color: Colors.blue,),
+                      suffixIcon: const Icon(
+                        Icons.visibility,
+                        color: Colors.blue,
+                      ),
                       contentPadding:
                           const EdgeInsets.symmetric(horizontal: 10.0),
                       filled: true,
@@ -162,12 +169,15 @@ class Register extends StatelessWidget {
                   ElevatedButton(
                     onPressed: () {
                       if (formKey.currentState?.validate() ?? false) {
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(
-                            content: Text('Formulário enviado com sucesso!'),
-                          ),
-                        );
-                      }
+                          // Navega para outra tela
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => Message(),
+                            ),
+                          );
+                        }
+                      
                     },
                     style: ButtonStyle(
                         backgroundColor: MaterialStateProperty.all<Color>(
@@ -175,10 +185,12 @@ class Register extends StatelessWidget {
                         padding: const MaterialStatePropertyAll(
                           EdgeInsets.symmetric(horizontal: 30),
                         )),
-                    child: const Text('Cadastrar',
-                    style: TextStyle(
-                      fontSize: 20,
-                    ),),
+                    child: const Text(
+                      'Cadastrar',
+                      style: TextStyle(
+                        fontSize: 20,
+                      ),
+                    ),
                   ),
                   const SizedBox(
                     height: 50,
@@ -192,7 +204,6 @@ class Register extends StatelessWidget {
                   ),
                   GestureDetector(
                       onTap: () {
-                        
                         Navigator.pop(context);
                       },
                       child: const Align(

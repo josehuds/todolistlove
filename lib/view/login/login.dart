@@ -10,7 +10,7 @@ class Login extends StatelessWidget {
       home: Scaffold(
         body: Container(
   
-          color: Colors.purpleAccent.shade200,
+          color: const Color.fromARGB(255, 179, 26, 206),
           width: double.infinity,
           height: MediaQuery.of(context).size.height,
           child: SingleChildScrollView(
@@ -29,8 +29,9 @@ class Login extends StatelessWidget {
                   elevation: 0,
                   child: Column(
                     children: [
-                      Image.asset(
-                        'lib/image/Lovepeople_logo.jpg',
+                      Image.network(
+                    'https://lh3.googleusercontent.com/drive-storage/AKHj6E4j9it_BlVExLVKhgU_TKqQ0V9SRVfN1AR2WGHoAQKOXDwcQN1quOXkJo7iuZnwkoqxLcCzTZ5wtIvQO4-47aQUKrL-2Y9BcirfXFf-_A=w999-h962',
+
                         height: 150,
                         width: double.infinity,
                         fit: BoxFit.contain,
@@ -133,7 +134,7 @@ class Login extends StatelessWidget {
                               backgroundColor: MaterialStateProperty.all<Color>(
                                   Colors.blue.shade900),
                               padding: const MaterialStatePropertyAll(
-                                  EdgeInsets.symmetric(horizontal: 20))),
+                                  EdgeInsets.symmetric(horizontal: 30))),
                           child: const Text(
                             'Entrar',
                             style: TextStyle(
@@ -164,7 +165,7 @@ class Login extends StatelessWidget {
                             },
                             child: const Align(
                                 alignment: Alignment.center,
-                                child: Text('Nao possui cadastro? Clique aqui',
+                                child: Text('Não possui cadastro? Clique aqui',
                                     style: TextStyle(
                                       fontSize: 15,
                                       fontWeight: FontWeight.bold,
