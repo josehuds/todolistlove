@@ -4,35 +4,57 @@ class Message extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.purple, // Defina a cor desejada aqui
-      body:  Center(
-        child: Stack(
+      backgroundColor:
+          Color.fromARGB(255, 179, 26, 206), // Defina a cor desejada aqui
+      body: Center(
+        child: ListView(
           children: [
             Container(
+              margin: EdgeInsets.only(top: 300),
               decoration: const BoxDecoration(
-                color: Colors.purple,
+                color: Color.fromARGB(255, 179, 26, 206),
                 borderRadius: BorderRadius.only(
                   bottomLeft: Radius.circular(20.0),
                   bottomRight: Radius.circular(20.0),
                 ),
               ),
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   // Mensagem no topo
                   const Text(
-                    'Bem-vindo à minha tela!',
-                    style: TextStyle(fontSize: 18.0),
+                    'Cadastro Concluido!',
+                    style: TextStyle(
+                        fontSize: 25.0,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold),
                   ),
-                  const SizedBox(height: 20.0), // Espaçamento entre a mensagem e o botão
-      
+                  const SizedBox(
+                      height: 30.0), // Espaçamento entre a mensagem e o botão
+
                   // Botão no meio
                   ElevatedButton(
                     onPressed: () {
                       // Adicione a lógica para o botão aqui
                     },
-                    child: Text('Clique Aqui'),
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all<Color>(
+                          Colors.blue.shade900),
+                      padding: const MaterialStatePropertyAll(
+                        EdgeInsets.symmetric(horizontal: 30),
+                      ),
+                    ),
+                    child: const Text(
+                      'Começar',
+                      style: TextStyle(
+                        fontSize: 20,
+                      ),
+                    ),
                   ),
+
+                  SizedBox(
+                    height: 100,
+                  )
                 ],
               ),
             ),
@@ -50,18 +72,27 @@ class Message extends StatelessWidget {
                       topRight: Radius.circular(200),
                     ),
                   ),
-                  child: Padding(
+                  child: Container(
+                    width: double.infinity,
+                    height: 300,
                     padding: const EdgeInsets.all(16.0),
-                    child: Image.network(
-                      'https://lh3.googleusercontent.com/drive-storage/AKHj6E4j9it_BlVExLVKhgU_TKqQ0V9SRVfN1AR2WGHoAQKOXDwcQN1quOXkJo7iuZnwkoqxLcCzTZ5wtIvQO4-47aQUKrL-2Y9BcirfXFf-_A=w999-h962',
-                      width: 200.0,
-                      height: 150.0,
-                      fit: BoxFit.cover,
+                    child: Image.asset(
+                      'assets/image/semtitulo.png',
+                      fit: BoxFit.none,
+                      
                     ),
+                    
+                  
                   ),
+                  
+                  
                 ),
+                
               ),
+
+              
             ),
+           
           ],
         ),
       ),

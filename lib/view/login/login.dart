@@ -9,7 +9,6 @@ class Login extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         body: Container(
-  
           color: const Color.fromARGB(255, 179, 26, 206),
           width: double.infinity,
           height: MediaQuery.of(context).size.height,
@@ -30,8 +29,7 @@ class Login extends StatelessWidget {
                   child: Column(
                     children: [
                       Image.asset(
-                    'assets/image/lovepeople_logo.jpg',
-
+                        'assets/image/lovepeople_logo.jpg',
                         height: 150,
                         width: double.infinity,
                         fit: BoxFit.contain,
@@ -69,7 +67,8 @@ class Login extends StatelessWidget {
                         TextFormField(
                           keyboardType: TextInputType.emailAddress,
                           decoration: InputDecoration(
-                            contentPadding: const EdgeInsets.symmetric(horizontal: 10.0),
+                            contentPadding:
+                                const EdgeInsets.symmetric(horizontal: 10.0),
                             filled: true,
                             fillColor: Colors.white,
                             border: OutlineInputBorder(
@@ -101,7 +100,8 @@ class Login extends StatelessWidget {
                           cursorColor: Colors.blue.shade900,
                           keyboardType: TextInputType.text,
                           decoration: InputDecoration(
-                            contentPadding: const EdgeInsets.symmetric(horizontal: 10.0),
+                              contentPadding:
+                                  const EdgeInsets.symmetric(horizontal: 10.0),
                               suffixIcon: const Icon(
                                 Icons.visibility,
                                 color: Colors.blue,
