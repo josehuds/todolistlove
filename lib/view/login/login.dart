@@ -29,8 +29,8 @@ class Login extends StatelessWidget {
                   elevation: 0,
                   child: Column(
                     children: [
-                      Image.network(
-                    'https://lh3.googleusercontent.com/drive-storage/AKHj6E4j9it_BlVExLVKhgU_TKqQ0V9SRVfN1AR2WGHoAQKOXDwcQN1quOXkJo7iuZnwkoqxLcCzTZ5wtIvQO4-47aQUKrL-2Y9BcirfXFf-_A=w999-h962',
+                      Image.asset(
+                    'assets/image/lovepeople_logo.jpg',
 
                         height: 150,
                         width: double.infinity,
