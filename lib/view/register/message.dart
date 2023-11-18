@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:todolistlove/view/tasck/list_page.dart';
 
 class Message extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor:
-          Color.fromARGB(255, 179, 26, 206), // Defina a cor desejada aqui
+          const Color.fromARGB(255, 179, 26, 206), // Defina a cor desejada aqui
       body: Center(
         child: ListView(
           children: [
             Container(
-              margin: EdgeInsets.only(top: 300),
+              margin: const EdgeInsets.only(top: 300),
               decoration: const BoxDecoration(
                 color: Color.fromARGB(255, 179, 26, 206),
                 borderRadius: BorderRadius.only(
@@ -30,12 +31,11 @@ class Message extends StatelessWidget {
                         fontWeight: FontWeight.bold),
                   ),
                   const SizedBox(
-                      height: 30.0), // Espaçamento entre a mensagem e o botão
-
-                  // Botão no meio
+                      height: 30.0), 
+                  
                   ElevatedButton(
                     onPressed: () {
-                      // Adicione a lógica para o botão aqui
+                      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>const Home()));
                     },
                     style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all<Color>(
@@ -52,7 +52,7 @@ class Message extends StatelessWidget {
                     ),
                   ),
 
-                  SizedBox(
+                  const SizedBox(
                     height: 100,
                   )
                 ],
@@ -79,20 +79,11 @@ class Message extends StatelessWidget {
                     child: Image.asset(
                       'assets/image/semtitulo.png',
                       fit: BoxFit.none,
-                      
                     ),
-                    
-                  
                   ),
-                  
-                  
                 ),
-                
               ),
-
-              
             ),
-           
           ],
         ),
       ),

@@ -169,15 +169,14 @@ class Register extends StatelessWidget {
                   ElevatedButton(
                     onPressed: () {
                       if (formKey.currentState?.validate() ?? false) {
-                          // Navega para outra tela
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => Message(),
-                            ),
-                          );
-                        }
-                      
+                        // Navega para outra tela
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => Message(),
+                          ),
+                        );
+                      }
                     },
                     style: ButtonStyle(
                         backgroundColor: MaterialStateProperty.all<Color>(
